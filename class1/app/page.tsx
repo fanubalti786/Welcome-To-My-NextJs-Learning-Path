@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Rootpage() {
   return (
     <div>
-      <h1>Hello World Hi </h1>
-      <p>i am ready</p>
+      <h1>Root Page</h1>
+    
     </div>
   );
 }

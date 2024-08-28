@@ -6,8 +6,9 @@ export default function layout(props: any) {
     
       <html lang="en">
       <body>
+        <h1>Root Layout Page</h1>
         <h1>{props.children}</h1>
-        <p>sahi kahty ho ap</p>
+        
       </body>
     </html>
     
