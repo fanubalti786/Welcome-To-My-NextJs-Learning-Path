@@ -5,8 +5,8 @@ export default function RootPage() {
     <div>
       <h1>Root Page</h1>
       <Link href="/About" >About</Link><br/>
-      <Link href="/About" >Contact</Link><br/>
-      <Link href="/About" >Home</Link><br/>
+      <Link href="/Contact" >Contact</Link><br/>
+      <Link href="/Home" >Home</Link><br/>
     </div>
   )
 }
