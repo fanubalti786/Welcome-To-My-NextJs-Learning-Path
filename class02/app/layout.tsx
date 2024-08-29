@@ -22,6 +22,8 @@ export default function RootLayout({
         <Link href="/Contact">Contact</Link><br/>
         <Link href="/About">About</Link><br/>
         <Link href="/Contact">Contact</Link><br/>
+        <Link href="/property">property</Link><br/>
+
         {children}</body>
       
     </html>
