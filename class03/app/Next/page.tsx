@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function RootPage() {
+export default function Next() {
   return (
     <div>
-      Root Page
+        Next Page
     </div>
   )
 }
