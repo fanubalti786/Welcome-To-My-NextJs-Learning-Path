@@ -3,7 +3,8 @@ import Button from '../Components/page'
 export default function Home() {
   return (
     <div>
-      <div>Home Page</div>
+
+      <div>Home Page {name}</div>
       <Button/>
     </div>
 
