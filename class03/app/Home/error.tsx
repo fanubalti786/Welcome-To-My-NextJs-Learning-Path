@@ -4,7 +4,8 @@ import React from 'react'
 export default function error() {
   return (
     <div>
-      Error in Home Page
+      <div style={{background: "blue", textAlign:'center'}}>  Error in Home Page
+      </div>
     </div>
   )
 }
