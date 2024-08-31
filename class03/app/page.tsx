@@ -1,9 +1,13 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function RootPage() {
   return (
     <div>
-      Root Page
+      <div>Root Page</div>
+      <Link href="/Home">Home</Link><br/>
+      <Link href="/Next">Next</Link><br/>
+
     </div>
   )
 }
