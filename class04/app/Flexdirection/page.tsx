@@ -10,8 +10,8 @@ export default function News() {
         <div className="  border-2 bg-orange-400 ">03</div>
       </div>
 
-      <div className="flex flex-col-reverse ">
-        <div className="  border-2 bg-orange-400 ">01</div>
+      <div className="flex flex-col-reverse flex-stretch ">
+        <div className="  border-2 bg-orange-400  ">01</div>
         <div className="  border-2 bg-orange-400 ">02</div>
         <div className="  border-2 bg-orange-400 ">03</div>
       </div>
