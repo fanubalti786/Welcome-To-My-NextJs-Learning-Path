@@ -37,7 +37,7 @@ export default function RootLayout({
                 Side Navigation
               </div>
 
-              <div className="bg-slate-300 flex-1  border-2">
+              <div className="bg-slate-300 flex-1  border-2 ">
                 {children}
               </div>
             </div>
