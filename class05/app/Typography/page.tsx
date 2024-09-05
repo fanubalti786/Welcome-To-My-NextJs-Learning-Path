@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function Typographi() {
   return (
     <div>
@@ -12,13 +11,32 @@ export default function Typographi() {
         The quick brown fox ...
       </p>
 
-
-        <hr />
-        <br />
-    <h1 className="font-bold">Letter Spacing</h1>
+      <hr />
+      <br />
+      <h1 className="font-bold">Letter Spacing</h1>
       <p className="tracking-tight ...">The quick brown fox ...</p>
       <p className="tracking-normal ...">The quick brown fox ...</p>
       <p className="tracking-wide ...">The quick brown fox ...</p>
+
+      <hr />
+      <br />
+      <h1 className="font-bold">Line Height</h1>
+
+      <p className="leading-normal ...">
+        So I started to walk into the water...
+      </p>
+      <p className="leading-relaxed ...">
+        So I started to walk into the water...
+      </p>
+      <p className="leading-loose ...">
+        So I started to walk into the water...
+      </p>
+      <hr />
+      <br />
+
+      <p className="leading-6 ...">So I started to walk into the water...</p>
+      <p className="leading-7 ...">So I started to walk into the water...</p>
+      <p className="leading-8 ...">So I started to walk into the water...</p>
     </div>
   );
 }
