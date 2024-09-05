@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function RootPage() {
+export default function Typographi() {
   return (
     <div>
-      <div>hello</div>
+      
     </div>
   )
 }
