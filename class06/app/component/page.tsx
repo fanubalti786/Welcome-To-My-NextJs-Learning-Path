@@ -1,4 +1,5 @@
 "use client"
+import { useState } from 'react'
 import React from 'react'
 
 // export default function Button() {
@@ -27,27 +28,61 @@ import React from 'react'
 
 
 
+
+// export default function Button() {
+
+//     let counter = 0
+
+//     function handleMinus(){
+//         counter = counter - 1
+//         console.log(counter);
+
+//     }
+
+//     function handlePlus(){
+//         counter = counter + 1
+//         console.log(counter);
+//     }
+
+   
+//   return (
+//     <div>
+//        <button className='bg-gray-600 p-7' onClick={handleMinus} >+</button>
+//       <span className="p-3">{counter}</span>
+//       <button className='bg-gray-600 p-7 px-8' onClick={handlePlus}>-</button>
+//     </div>
+//   )
+// }
+
+
+
+
 export default function Button() {
 
-    let counter = 0
+    let [counter, setcounter] = useState(0)
+//jsx
 
     function handleMinus(){
-        counter = counter - 1
+        // setcounter(counter-1)
+        let newCounter = counter - 1
+        setcounter(newCounter)
         console.log(counter);
 
     }
 
     function handlePlus(){
-        counter = counter + 1
+        // setcounter(counter+1)
+        let newCounter = counter + 1
+        setcounter(newCounter)
         console.log(counter);
     }
 
    
   return (
     <div>
-       <button className='bg-gray-600 p-7' onClick={handleMinus} >+</button>
+       <button className='bg-gray-600 p-7' onClick={handleMinus} >-</button>
       <span className="p-3">{counter}</span>
-      <button className='bg-gray-600 p-7 px-8' onClick={handlePlus}>-</button>
+      <button className='bg-gray-600 p-7 px-8' onClick={handlePlus}>+</button>
     </div>
   )
 }
