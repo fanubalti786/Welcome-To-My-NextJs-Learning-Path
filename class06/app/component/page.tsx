@@ -100,7 +100,11 @@ export default function Button() {
     useEffect(()=> 
     {
         console.log("Render")
-    })
+
+        return ()=> {
+            alert("componetn will unmount or effect dependencies change")
+        }
+    },[counter])
     
 
 
