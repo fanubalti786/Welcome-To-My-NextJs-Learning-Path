@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import React from 'react'
 
 // export default function Button() {
@@ -96,7 +96,13 @@ export default function Button() {
         }  )
         
     }
-    console.log("Render")
+
+    useEffect(()=> 
+    {
+        console.log("Render")
+    })
+    
+
 
    
   return (
