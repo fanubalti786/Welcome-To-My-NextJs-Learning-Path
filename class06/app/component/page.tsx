@@ -64,18 +64,39 @@ export default function Button() {
 
     function handleMinus(){
         // setcounter(counter-1)
-        let newCounter = counter - 1
-        setcounter(newCounter)
-        console.log(counter);
+        // let newCounter = counter - 1
+        // setcounter(newCounter)
+
+        setcounter((previous) => {
+
+            if(previous === 0)
+                return previous
+            else 
+            return previous - 1
+            
+
+        }  )
+
+        
 
     }
 
     function handlePlus(){
         // setcounter(counter+1)
-        let newCounter = counter + 1
-        setcounter(newCounter)
-        console.log(counter);
+        // let newCounter = counter + 1
+        // setcounter(newCounter)
+
+        setcounter((previous) => {
+
+            if(previous >= 10)
+                return 0
+            else 
+            return previous + 1
+
+        }  )
+        
     }
+    console.log("Render")
 
    
   return (
