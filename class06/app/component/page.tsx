@@ -13,14 +13,41 @@ import React from 'react'
 //   )
 // }
 
+// export default function Button() {
+
+//     const counter = 0
+//   return (
+//     <div>
+//        <button className='bg-gray-600 p-7' onClick={()=> {counter === counter + 1}} >+</button>
+//       <span className="p-3">{counter}</span>
+//       <button className='bg-gray-600 p-7 px-8' onClick={()=> {counter === counter - 1}}>-</button>
+//     </div>
+//   )
+// }
+
+
+
 export default function Button() {
 
-    const counter = 0
+    let counter = 0
+
+    function handleMinus(){
+        counter = counter - 1
+        console.log(counter);
+
+    }
+
+    function handlePlus(){
+        counter = counter + 1
+        console.log(counter);
+    }
+
+   
   return (
     <div>
-       <button className='bg-gray-600 p-7' onClick={()=> {counter === counter + 1}} >+</button>
+       <button className='bg-gray-600 p-7' onClick={handleMinus} >+</button>
       <span className="p-3">{counter}</span>
-      <button className='bg-gray-600 p-7 px-8' onClick={()=> {counter === counter - 1}}>-</button>
+      <button className='bg-gray-600 p-7 px-8' onClick={handlePlus}>-</button>
     </div>
   )
 }
