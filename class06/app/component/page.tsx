@@ -103,6 +103,7 @@ export default function Button() {
 
         return ()=> {
             alert("componetn will unmount or effect dependencies change")
+            // When we change our route than this return block of code executed its a part of unmounted
         }
     },[counter])
     
