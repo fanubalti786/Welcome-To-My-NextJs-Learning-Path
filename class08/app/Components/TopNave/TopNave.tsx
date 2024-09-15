@@ -12,7 +12,7 @@ export default function TopNave() {
         </div>
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="hover:text-gray-400 transition duration-300">Home</Link>
-          <Link href="/about" className="hover:text-gray-400 transition duration-300">Blogs</Link>
+          <Link href="/Blogs" className="hover:text-gray-400 transition duration-300">Blogs</Link>
           <Link href="/services" className="hover:text-gray-400 transition duration-300">Services</Link>
           <Link href="/contact" className="hover:text-gray-400 transition duration-300">Contact</Link>
         </div>
