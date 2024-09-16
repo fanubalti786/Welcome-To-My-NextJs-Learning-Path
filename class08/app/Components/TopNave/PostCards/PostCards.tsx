@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function PostCards(props:any) {
     const {postData, abc} = props
+    
   return (
     <div>
       <div>
@@ -16,9 +17,9 @@ export default function PostCards(props:any) {
 
                     {/* Post Content */}
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">Post Title</div>
+                        <div className="font-bold text-xl mb-2">{postData.title}</div>
                         <p className="text-gray-700 text-base">
-                            Post Body
+                        {postData.body}
                         </p>
                     </div>
 

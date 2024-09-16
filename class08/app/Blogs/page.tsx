@@ -1,6 +1,7 @@
 "use client"
 import React, { use, useEffect, useState } from 'react'
 import PostCards from '../Components/TopNave/PostCards/PostCards'
+import Link from 'next/link'
 
 export default function Blogs() {
  const [postData, setPostdata] = useState([])
@@ -23,10 +24,11 @@ export default function Blogs() {
 
   return (
     <div className="flex flex-wrap justify-center ">
-      {postData.map((eachPost) => {
+      {postData.map((eachPost:any) => {
 
         return(
-          <PostCards postData ={eachPost} abc = {"sdf"}/>
+          <Link href={"/Blogs/"+eachPost.id}><PostCards postData ={eachPost} abc = {"sdf"}/></Link>
+          
         )
 
       }
