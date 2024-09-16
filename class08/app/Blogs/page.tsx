@@ -19,7 +19,7 @@ export default function Blogs() {
         setPostdata(data)
     }
 
-    console.log(postData)
+    
 
 
   return (
