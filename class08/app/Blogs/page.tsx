@@ -13,7 +13,8 @@ export default function Blogs() {
 
     const getAllPost = async() =>{
         const responce = await fetch("https://jsonplaceholder.typicode.com/posts")
-        console.log(responce)
+        const data = await responce.json()
+        console.log(data)
     }
   return (
     <div>
