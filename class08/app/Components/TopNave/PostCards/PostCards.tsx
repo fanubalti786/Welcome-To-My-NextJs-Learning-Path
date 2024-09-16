@@ -17,9 +17,9 @@ export default function PostCards(props:any) {
 
                     {/* Post Content */}
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">{postData.title}</div>
+                        <div className="font-bold text-xl mb-2">{postData.title}:any</div>
                         <p className="text-gray-700 text-base">
-                        {postData.body}
+                        {postData.body}:any
                         </p>
                     </div>
 
