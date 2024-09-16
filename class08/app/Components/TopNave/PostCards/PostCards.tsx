@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function PostCards() {
+export default function PostCards(props:any) {
+    const {postData, abc} = props
   return (
     <div>
       <div>

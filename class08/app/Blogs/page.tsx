@@ -1,8 +1,9 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import PostCards from '../Components/TopNave/PostCards/PostCards'
 
 export default function Blogs() {
+ const [postData, setPostdata] = useState([])
 
     useEffect(()=>
     {
@@ -14,11 +15,23 @@ export default function Blogs() {
     const getAllPost = async() =>{
         const responce = await fetch("https://jsonplaceholder.typicode.com/posts")
         const data = await responce.json()
-        console.log(data)
+        setPostdata(data)
     }
+
+    console.log(postData)
+
+
   return (
-    <div>
-      <PostCards/> // PostCard folder
+    <div className="flex flex-wrap justify-center ">
+      {postData.map((eachPost) => {
+
+        return(
+          <PostCards postData ={eachPost} abc = {"sdf"}/>
+        )
+
+      }
+      )}
+       
     </div>
   )
 }

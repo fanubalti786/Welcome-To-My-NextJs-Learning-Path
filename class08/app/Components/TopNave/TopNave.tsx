@@ -5,7 +5,7 @@ export default function TopNave() {
   return (
     <div>
 
-<nav className="bg-gray-900 text-white shadow-md">
+<nav className="bg-gray-900 text-white shadow-md ">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-2xl font-semibold">
           <Link href="/" className="hover:text-gray-400">MySite</Link>
