@@ -17,7 +17,7 @@ export default function Blogs() {
     }
   return (
     <div>
-      <PostCards/>
+      <PostCards/> // PostCard folder
     </div>
   )
 }
