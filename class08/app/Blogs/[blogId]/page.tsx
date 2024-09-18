@@ -12,8 +12,8 @@ import React, { useEffect, useState } from 'react'
 
 export default function blogIds({params}:any) {
 
-  const [postData, setPostData] = useState({})
-  // const [comment, setComments] = useState([])
+  const [postData, setPostData] = useState<any>({})
+  const [comment, setComments] = useState([])
 
   useEffect(()=> {
 
@@ -27,10 +27,10 @@ export default function blogIds({params}:any) {
       const specificData = await responce.json()
       setPostData(specificData)
       console.log(specificData)
-      // const responseComment = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.blogId}/comments`)
-      // const commentsData = await responseComment.json()
-      // console.log("comments", commentsData)
-      // setComments(commentsData)
+      const responseComment = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.blogId}/comments`)
+      const commentsData = await responseComment.json()
+      console.log("comments", commentsData)
+      setComments(commentsData)
     }
     
     
@@ -38,29 +38,23 @@ export default function blogIds({params}:any) {
   }
   
   return (
-    // <div>
-      
-    //   <div>
-    //   <div className="w-full mx-auto bg-white shadow-md rounded-lg my-4 p-6">
-    //             {/* Post Title */}
-    //             <h2 className="text-2xl font-bold text-gray-800 mb-4">{postData.title}</h2>
+    <div>
+            <div className="w-full mx-auto bg-white shadow-md rounded-lg my-4 p-6">
+                {/* Post Title */}
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">{postData.title}</h2>
 
-    //             {/* Post Body */}
-    //             <p className="text-gray-700 text-base mb-6">{(postData || {}).body}</p>
+                {/* Post Body */}
+                <p className="text-gray-700 text-base mb-6">{postData.body}</p>
 
-    //             {/* Comments Section
-    //             {comment && comment.map((com) => {
-    //                 return (
-    //                     <Comments commentData={com} />
-    //                 )
-    //             })} */}
+                {/* Comments Section
+                {comments && comments.map(com => {
+                    return (
+                        <Comments commentData={com} />
+                    )
+                })} */}
 
-    //         </div>
-    //     </div>
-     
-      
-    // </div>
-    <div>hello</div>
+            </div>
+        </div>
 
     
   )
