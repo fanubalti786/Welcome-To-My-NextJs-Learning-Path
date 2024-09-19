@@ -45,7 +45,7 @@ export default function blogIds({params}:any) {
                 <h6 className="text-2xl font-bold text-gray-800 mb-4">{postData.title}</h6>
 
                 {/* Post Body */}
-                <h1>Body</h1>
+                <h1 className='font-bold'>Body</h1>
                 <p className="text-gray-700 text-base mb-6">{postData.body}</p>
 
                 {/* Comments Section */}
