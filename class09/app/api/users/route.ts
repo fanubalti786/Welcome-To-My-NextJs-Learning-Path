@@ -1,4 +1,4 @@
-import { NextResponse} from "next/server";
+import { NextRequest, NextResponse} from "next/server";
 
 const usersData = [
     {
@@ -20,4 +20,11 @@ const usersData = [
 
 export function GET(){
     return NextResponse.json(usersData)
+}
+
+
+export async function POST(request:NextRequest){
+    const formData = await request.json()
+    usersData.push(formData)
+
 }
