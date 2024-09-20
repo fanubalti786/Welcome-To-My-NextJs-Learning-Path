@@ -19,11 +19,7 @@ const usersData = [
         "heading":"Developer"
     },
 
-    {
-        "name":"sohail",
-        "contactNum":"03127465443",
-        "heading":"Developer"
-    },
+    
 
 ]
 
@@ -36,5 +32,6 @@ export function GET(){
 export async function POST(request:NextRequest){
     const formData = await request.json()
     usersData.push(formData)
+    return NextResponse.json({"Form Data":"Successfully Post"})
 
 }
