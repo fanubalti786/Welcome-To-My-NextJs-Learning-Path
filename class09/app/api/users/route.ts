@@ -2,19 +2,29 @@ import { NextRequest, NextResponse} from "next/server";
 
 const usersData = [
     {
-        "name":"irfan",
-        "rollNo":"36525"
+        "name":"arif",
+        "contactNum":"0365736478",
+        "heading":"Project Manager"
     },
 
     {
         "name":"mumtaz",
-        "rollNo":"43444"
+        "contactNum":"03347685756",
+        "heading":"Designer"
     },
 
     {
         "name":"sohail",
-        "rollNo":"3688"
+        "contactNum":"03127465443",
+        "heading":"Developer"
     },
+
+    {
+        "name":"sohail",
+        "contactNum":"03127465443",
+        "heading":"Developer"
+    },
+
 ]
 
 

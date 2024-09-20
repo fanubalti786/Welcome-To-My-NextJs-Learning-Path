@@ -1,18 +1,7 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Table() {
-
-    useEffect(()=>{
-        fetchData()
-    },[])
-
-
-    const fetchData = async ()=>{
-        const responce = await fetch("http://localhost:3000/api/users")
-        const data = responce.json()
-        console.log(data)
-    }
 
 
   return (
@@ -44,6 +33,7 @@ export default function Table() {
         </tr>
       </tbody>
     </table>
+    <br />
   </div>
     </div>
   )
