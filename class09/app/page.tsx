@@ -17,8 +17,12 @@ export default function RootPate() {
     }
   return (
     <div>
-      {data.map(())}
-      <Table/>
+      {data.map(()=>
+      {
+        return     <Table/>
+
+      })}
+  
     </div>
   )
 }
