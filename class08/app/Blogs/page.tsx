@@ -1,5 +1,5 @@
 "use client"
-import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PostCards from '../Components/TopNave/PostCards/PostCards'
 import Link from 'next/link'
 
