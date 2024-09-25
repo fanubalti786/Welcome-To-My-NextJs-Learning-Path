@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function GrandChilCom() {
+export default function GrandChilCom({nameState}:any) {
   return (
     <div>
-      GrandChildCom Content;
+      GrandChildCom Content {nameState};
     </div>
   )
 }
