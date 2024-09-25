@@ -2,11 +2,11 @@ import React from 'react'
 import ChildCom from './ChildCom/page'
 
 
-export default function ParentCom({nameState}:any) {
+export default function ParentCom() {
   return (
     <div>
       ParentCom Context:
-      <ChildCom nameState = {nameState}/>
+      <ChildCom/>
     </div>
   )
 }
