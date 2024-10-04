@@ -5,10 +5,10 @@ export const Mycontext = createContext({});
 
 export function ContextProvider({children}:any){
     
-    const [name,nameState] = useState("Fanu Balti")
+    const [name,setNameState] = useState("Fanu Balti")
 
     return(
-        <Mycontext.Provider value={{name,nameState}}>
+        <Mycontext.Provider value={{name,setNameState}}>
             {children}
         </Mycontext.Provider>
     )
