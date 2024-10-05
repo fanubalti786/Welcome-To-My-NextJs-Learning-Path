@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [toDoItems, setToDoItems] = useState([]);
+  const [finishItem, setFinishItem] = useState([]);
   const [inputTextField, setInputTextField] = useState("");
 
   const addToDoList = () => {
@@ -23,6 +24,15 @@ export default function Home() {
     setToDoItems(removeItem);
    
   };
+
+  const completeItem = (index:string) => {
+    const completedItem: any = [...toDoItems];
+    completedItem.push(inputTextField);
+    setFinishItem(completedItem);
+    
+  };
+
+  console.log(finishItem);
 
   return (
     <div className="flex justify-center items-center h-screen bg-teal-700 font-bold">
@@ -57,7 +67,8 @@ export default function Home() {
                     <li>{item}</li>
 
                     <div className=" ml-[122px] flex mb-1">
-                      <button className="border-3 border-green-700 px-1 py-0.5 mt-[3px] mr-[2px]  rounded-[3px] bg-green-700">
+                      <button className="border-3 border-green-700 px-1 py-0.5 mt-[3px] mr-[2px] 
+                       rounded-[3px] bg-green-700" onClick={()=> completeItem(item) }>
                         Complete
                       </button>
                       <button className="border-2 border-red-800 px-1   mt-[3px] rounded-[3px]
