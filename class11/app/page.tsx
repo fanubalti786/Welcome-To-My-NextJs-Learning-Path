@@ -14,7 +14,6 @@ export default function Home() {
     const toDoItemscopy: any = [...toDoItems];
     toDoItemscopy.push(inputTextField);
     setToDoItems(toDoItemscopy);
-    console.log(toDoItems);
     setInputTextField("");
   };
 
@@ -64,6 +63,10 @@ export default function Home() {
               {toDoItems.length > 0 ? 
               toDoItems.map((item,index)=>
               {
+
+                const markComplete = compItem.includes(item)
+                console.log(markComplete)
+
                 return(
                   <div className="border-2 rounded-[3px] mt-[10px] bg-white">
                   <ul className="flex ">
