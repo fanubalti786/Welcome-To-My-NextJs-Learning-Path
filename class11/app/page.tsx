@@ -68,7 +68,7 @@ export default function Home() {
                 console.log(markComplete)
 
                 return(
-                  <div className="border-2 rounded-[3px] mt-[10px] bg-white">
+                  <div className={markComplete? "bg-green-500" : "border-2 rounded-[3px] mt-[10px] bg-white"}>
                   <ul className="flex ">
                     <li>{item}</li>
 
