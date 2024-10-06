@@ -38,7 +38,9 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-teal-700 font-bold">
-      <div className=" flex flex-col border-1 border-white rounded-[5px] w-[450px] h-[250px] bg-slate-600">
+      <div className={toDoItems.length>3?"flex flex-col border-1 border-white rounded-[5px] w-[450px] h-[400px] bg-slate-600 overflow-scroll"
+      :
+      " flex flex-col border-1 border-white rounded-[5px] w-[450px] h-[250px] bg-slate-600"}>
         <h1 className="text-center border-2 border-amber-900 bg-amber-800 p-2  ">
           To Do List
         </h1>
@@ -47,17 +49,17 @@ export default function Home() {
           <div className="flex mt-7 flex-col justify-center items-center">
             <div className="">
               <input
-                className="rounded-[3px] px-9 py-1.5 bg-slate-200"
+                className="rounded-[3px] pr-12 pl-1 py-1.5 bg-slate-300"
                 type="text"
-                placeholder="Per Day Task"
+                placeholder ="Enter Your Tasks"
                 value={inputTextField}
                 onChange={(e) => setInputTextField(e.target.value)}
               />
               <button
-                className=" ml-0.5 rounded-[3px] px-3 py-1.5 text-white bg-red-900 "
+                className=" ml-0.5 rounded-[3px] px-3 py-1.5 text-white bg-red-900 hover:bg-red-950 transition "
                 onClick={() => addToDoList()}
               >
-                Done
+                Add
               </button>
 
               {toDoItems.length > 0 ? 
@@ -68,29 +70,42 @@ export default function Home() {
                 console.log(markComplete)
 
                 return(
-                  <div className={markComplete? "bg-green-500" : "border-2 rounded-[3px] mt-[10px] bg-white"}>
+                  <div className={markComplete? " border-2 rounded-[3px] mt-[5px] bg-green-500" : "border-2 rounded-[3px] mt-[5px] bg-slate-200"}>
                   <ul className="flex ">
-                    <li>{item}</li>
+                    <li className={markComplete?"flex-1 ml-[3px]":"flex-1 mt-[4px] ml-[3px]"}>{item}</li>
 
-                    <div className=" ml-[122px] flex mb-1">
-                      <button className="border-3 border-green-700 px-1 py-0.5 mt-[3px] mr-[2px] 
+                    {
+                      markComplete?
+
+                      <button className=" mx-1 py-[2px]">{"✔"}</button> :
+                      
+                    <>
+                    <div className="  flex p-[2px]">
+                      <button className="border-2 border-green-700 mr-[2px] 
                        rounded-[3px] bg-green-700" onClick={()=> 
                        completeItem(item)
                         }>
                         Complete
                       </button>
-                      <button className="border-2 border-red-800 px-1   mt-[3px] rounded-[3px]
+                      <button className="border-2 border-red-800    rounded-[3px]
                        bg-red-700" onClick={()=> removeTodoItem(index)}>
                         Remove
                       </button>
                     </div>
+                    </>
+                    
+                    }
                   </ul>
                 </div>
                 )
               })
                 
               : 
-                <div>No Value</div>
+              <div className="flex border-2 border-yellow-500 rounded-[3px] mt-[7px] bg-yellow-200">
+                <div className="flex-1">Manage your Tasks!</div>
+                <div>{"😊"}</div>
+              </div>
+                
               }
 
               
