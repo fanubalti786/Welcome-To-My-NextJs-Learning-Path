@@ -3,6 +3,7 @@ import Image from "next/image";
 import { todo } from "node:test";
 import { list } from "postcss";
 import { useState } from "react";
+import picture  from "@/image/card.jpg"
 
 export default function Home() {
   const [toDoItems, setToDoItems] = useState([]);
@@ -37,6 +38,7 @@ export default function Home() {
   // console.log(finishItem);
 
   return (
+    
     <div className="flex justify-center items-center h-screen bg-teal-700 font-bold">
       <div className={toDoItems.length>3?"flex flex-col border-1 border-white rounded-[5px] w-[450px] h-[400px] bg-slate-600 overflow-scroll"
       :
@@ -113,6 +115,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <img src="picture" alt="notfound" />
     </div>
   );
 }
