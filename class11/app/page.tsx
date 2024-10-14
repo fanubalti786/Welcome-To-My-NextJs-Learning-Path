@@ -7,7 +7,6 @@ import picture  from "@/image/card.jpg"
 
 export default function Home() {
   const [toDoItems, setToDoItems] = useState([]);
-  const [finishItem, setFinishItem] = useState([]);
   const [inputTextField, setInputTextField] = useState("");
   const [compItem, setComItem] = useState([])
 
@@ -116,7 +115,7 @@ export default function Home() {
         </div>
       </div>
 
-      <img src="picture" alt="notfound" />
+      {/* <img src="picture" alt="notfound" /> */}
     </div>
   );
 }
