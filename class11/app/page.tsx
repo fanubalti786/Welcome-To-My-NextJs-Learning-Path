@@ -9,6 +9,7 @@ export default function Home() {
   const [toDoItems, setToDoItems] = useState([]);
   const [inputTextField, setInputTextField] = useState("");
   const [compItem, setComItem] = useState([])
+  let irfan=[];
 
   const addToDoList = () => {
     const toDoItemscopy: any = [...toDoItems];
