@@ -7,10 +7,10 @@ import ChildCom from './ChildCom/page'
 
 export default function ParentCom() {
   const ourContext:any = useContext(Mycontext)
-  const data = ourContext
+  const {name,setName} = ourContext
   return (
     <div>
-      ParentCom Context: {data.name}
+      ParentCom Context: {name}
       <ChildCom/>
     </div>
   )
