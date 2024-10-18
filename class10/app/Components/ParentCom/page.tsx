@@ -8,6 +8,7 @@ import ChildCom from './ChildCom/page'
 export default function ParentCom() {
   const ourContext:any = useContext(Mycontext)
   const {name,setName} = ourContext
+ 
   return (
     <div>
       ParentCom Context: {name}
