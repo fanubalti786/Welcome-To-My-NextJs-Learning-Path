@@ -23,5 +23,5 @@ const counterSlicer = createSlice({
 
 
 export const {incrementCounter,decrementCounter} = counterSlicer.actions
-export default counterSlicer.reducers;
+export default counterSlicer.reducer;
 
