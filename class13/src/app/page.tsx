@@ -1,12 +1,14 @@
-
+"use client"
 import React from 'react'
 import { useSelector } from 'react-redux'
-export default function Home() {
-  const counterState = "hello"
-  console.log("counterState",counterState)
+
+export default function page() {
+  const counterState = useSelector((state:any) => state)
+  console.log(counterState)
   return (
-    
-      <div>hello world</div>
-    
+    <div>
+      <div className='border-2 '>hello</div>
+    </div>
   )
 }
+
