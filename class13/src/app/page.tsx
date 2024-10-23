@@ -1,14 +1,22 @@
 "use client"
+import ReduxProvider from '@/ReduxProvider/reduxprovider'
 import React from 'react'
-// import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
+
 
 export default function page() {
-  // const counterState = useSelector((state:any) => state)
-  // console.log(counterState)
+  const counterState = useSelector((state:any) => state)
+  console.log(counterState)
   return (
-    <div>
+    
+    <ReduxProvider>
       <div className='border-2 '>hello</div>
-    </div>
+
+    </ReduxProvider>
+      
+    
+    
+    
   )
 }
 

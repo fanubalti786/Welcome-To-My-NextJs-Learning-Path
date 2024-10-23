@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit"
 import CounterSlicerReducer from "./counter/counterSlicer"
-export const store = configureStore({
+const store = configureStore({
     reducer:{
         counter:CounterSlicerReducer
 
         
     },
 })
+
+export default store;
