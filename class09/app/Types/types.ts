@@ -4,3 +4,15 @@ export type onchangeType = {
         name:string
     }
 }
+
+
+export type onchange = {
+    target:{
+        name:string
+        heading:string,
+        contactNum:string
+
+    }
+}
+
+

@@ -6,7 +6,7 @@ import React from 'react'
 export default function Form() {
 
 
-  const [formContent,setContent] = useState<{}>(
+  const [formContent,setContent] = useState<onchange>(
     
     {
         name:"",
@@ -18,31 +18,39 @@ export default function Form() {
 
   const onChangeHandler = (e:onchangeType) => {
 
-    if(e.target.name=== "name")
-    {
-      const newFormContent = {...formContent}
-      newFormContent.name = e.target.value
-      setContent(newFormContent)
-      
+
+    const obj = {
+      ...formContent,
+      [e.target.name]:e.target.value
     }
 
+    setContent(obj)
 
-    if(e.target.name=== "contactNum")
-      {
-        const newFormContent = {...formContent}
-        newFormContent.contactNum = e.target.value
-        setContent(newFormContent)
+    // if(e.target.name=== "name")
+    // {
+    //   const newFormContent = {...formContent}
+    //   newFormContent.name = e.target.value
+    //   setContent(newFormContent)
+      
+    // }
+
+
+    // if(e.target.name=== "contactNum")
+    //   {
+    //     const newFormContent = {...formContent}
+    //     newFormContent.contactNum = e.target.value
+    //     setContent(newFormContent)
         
-      }
+    //   }
 
 
-      if(e.target.name=== "heading")
-        {
-          const newFormContent = {...formContent}
-          newFormContent.heading = e.target.value
-          setContent(newFormContent)
+    //   if(e.target.name=== "heading")
+    //     {
+    //       const newFormContent = {...formContent}
+    //       newFormContent.heading = e.target.value
+    //       setContent(newFormContent)
           
-        }
+    //     }
 
 
   }
