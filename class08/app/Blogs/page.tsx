@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 export default function Blogs() {
  const [postData, setPostdata] = useState([])
+ 
 
     useEffect(()=>
     {
@@ -19,6 +20,8 @@ export default function Blogs() {
         setPostdata(data)
     }
 
+    console.log(postData[0])
+
     
 
 
@@ -27,7 +30,7 @@ export default function Blogs() {
       {postData.map((eachPost:any) => {
 
         return(
-          <Link href={"/Blogs/"+eachPost.id}><PostCards postData ={eachPost} abc = {"sdf"}/></Link>
+          <Link href={"/Blogs/"+eachPost.id}><PostCards postData ={eachPost}/></Link>
           
         )
 
