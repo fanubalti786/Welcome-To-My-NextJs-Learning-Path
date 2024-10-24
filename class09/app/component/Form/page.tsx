@@ -1,44 +1,106 @@
 "use client";
+import { onchangeType } from '@/app/Types/types';
 import { useState } from 'react';
 import React from 'react'
 
 export default function Form() {
 
 
-    const [name, setName] = useState("");
-    const [contact, setContact] = useState("");
-    const [heading, setHeading] = useState("");
-  
-  
-  
-    const handleHeading = (e:any)=>{
-      setHeading(e.target.value)
+  const [formContent,setContent] = useState<{}>(
+    
+    {
+        name:"",
+        contactNum:"",
+        heading:""
+    },
+
+ )
+
+  const onChangeHandler = (e:onchangeType) => {
+
+    if(e.target.name=== "name")
+    {
+      const newFormContent = {...formContent}
+      newFormContent.name = e.target.value
+      setContent(newFormContent)
+      
     }
-  
-  
-    const handleContact = (e:any)=>{
-      setContact(e.target.value)
-    }
-  
-  
-    const handleName = (e:any)=>{
-      setName(e.target.value)
-    }
-  
+
+
+    if(e.target.name=== "contactNum")
+      {
+        const newFormContent = {...formContent}
+        newFormContent.contactNum = e.target.value
+        setContent(newFormContent)
+        
+      }
+
+
+      if(e.target.name=== "heading")
+        {
+          const newFormContent = {...formContent}
+          newFormContent.heading = e.target.value
+          setContent(newFormContent)
+          
+        }
+
+
+  }
+
+
+
     const handleSubmit = async ()=>{
-          const userobj = {
-              name:name,
-              contactNum:contact,
-              heading:heading
-          }
+          
   
           const requestBackend = await fetch("http://localhost:3000/api/users",{
               method:"POST",
               headers:{
                   'Content-Type': 'application/json'
               },
-              body:JSON.stringify(userobj)
+              body:JSON.stringify(formContent)
           })
+  
+          // if(requestBackend.ok)
+          //     {
+          //         fetchData()
+          //     }
+
+
+
+    // const [name, setName] = useState("");
+    // const [contact, setContact] = useState("");
+    // const [heading, setHeading] = useState("");
+  
+  
+  
+    // const handleHeading = (e:any)=>{
+    //   setHeading(e.target.value)
+    // }
+  
+  
+    // const handleContact = (e:any)=>{
+    //   setContact(e.target.value)
+    // }
+  
+  
+    // const handleName = (e:any)=>{
+    //   setName(e.target.value)
+    // }
+  
+    // const handleSubmit = async ()=>{
+    //       const userobj = {
+    //           name:name,
+    //           contactNum:contact,
+    //           heading:heading
+    //       }
+  
+    //       const requestBackend = await fetch("http://localhost:3000/api/users",{
+    //           method:"POST",
+    //           headers:{
+    //               'Content-Type': 'application/json'
+    //           },
+    //           body:JSON.stringify(userobj)
+    //       })
   
           // if(requestBackend.ok)
           //     {
@@ -63,10 +125,10 @@ export default function Form() {
             <input
               type="text"
               id="userName"
-              name="userName"
+              name="name"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Enter your user name"
-              onChange={handleName}
+              onChange={onChangeHandler}
               required
             />
           </div>
@@ -81,10 +143,10 @@ export default function Form() {
             <input
               type="text"
               id="userName"
-              name="userName"
+              name="heading"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Enter your Heading name"
-              onChange={handleHeading}
+              onChange={onChangeHandler}
               required
             />
           </div>
@@ -102,7 +164,7 @@ export default function Form() {
               name="contactNum"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Enter your contact number"
-              onChange={handleContact}
+              onChange={onChangeHandler}
               required
             />
           </div>
