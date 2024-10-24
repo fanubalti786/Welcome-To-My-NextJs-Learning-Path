@@ -6,7 +6,7 @@ import React from 'react'
 export default function Form() {
 
 
-  const [formContent,setContent] = useState<onchange>(
+  const [formContent,setContent] = useState<{}>(
     
     {
         name:"",
@@ -18,8 +18,8 @@ export default function Form() {
 
   const onChangeHandler = (e:onchangeType) => {
 
-
-    const obj = {
+    
+    const obj= {
       ...formContent,
       [e.target.name]:e.target.value
     }
