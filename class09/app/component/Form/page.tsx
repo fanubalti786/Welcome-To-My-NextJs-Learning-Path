@@ -1,9 +1,20 @@
 "use client";
 import { onchang, onchangeType } from '@/app/Types/types';
 import { useState } from 'react';
-import React from 'react'
+import React from 'react';
+import * as Yup from "yup";
+
+
+const contactInfoSchema = Yup.object().shape({
+  name:Yup.string().required().min(5).max(10),
+  contactNum:Yup.number().required(),
+  heading:Yup.string().required()
+
+
+})
 
 export default function Form() {
+  
 
 
 //   const [formContent,setContent] = useState<onchang>(
@@ -68,15 +79,22 @@ let formContent:onchang = {
 
 
     const handleSubmit = async ()=>{
-          
-  
-          const requestBackend = await fetch("http://localhost:3000/api/users",{
-              method:"POST",
-              headers:{
-                  'Content-Type': 'application/json'
-              },
-              body:JSON.stringify(formContent)
-          })
+
+      try {
+        const result= await contactInfoSchema.validate(formContent)
+        const requestBackend = await fetch("http://localhost:3000/api/users",{
+            method:"POST",
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(formContent)
+        })
+        
+      } catch (error) {
+        console.log(error)
+      }
+
+     
   
           // if(requestBackend.ok)
           //     {
