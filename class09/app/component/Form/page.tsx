@@ -1,20 +1,30 @@
 "use client";
-import { onchangeType } from '@/app/Types/types';
+import { onchang, onchangeType } from '@/app/Types/types';
 import { useState } from 'react';
 import React from 'react'
 
 export default function Form() {
 
 
-  const [formContent,setContent] = useState<{}>(
+//   const [formContent,setContent] = useState<onchang>(
     
-    {
-        name:"",
-        contactNum:"",
-        heading:""
-    },
+//     {
+//         name:"",
+//         contactNum:"",
+//         heading:""
+//     },
 
- )
+//  )
+
+
+let formContent:onchang = {
+      name:"",
+      contactNum:"",
+      heading:""
+  }
+
+
+
 
   const onChangeHandler = (e:onchangeType) => {
 
@@ -24,7 +34,7 @@ export default function Form() {
       [e.target.name]:e.target.value
     }
 
-    setContent(obj)
+    formContent = obj;
 
     // if(e.target.name=== "name")
     // {
