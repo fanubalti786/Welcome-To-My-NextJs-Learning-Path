@@ -3,7 +3,7 @@ import { Mycontext } from '@/Context/MyContext'
 import React,{useContext} from 'react'
 
 export default function GrandChilCom() {
-  const ourContext:any = useContext(Mycontext)
+  const ourContext:any = {...useContext(Mycontext)}// destructure can't be matter for context Api
   const {name, setNameState} = ourContext
   console.log(ourContext)
   return (
