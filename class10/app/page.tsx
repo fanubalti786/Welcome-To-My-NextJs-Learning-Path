@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import { ContextProvider } from "@/Context/MyContext";
-import ParentCom from "./Components/ParentCom/page";
 import { Mycontext } from "@/Context/MyContext";
 import { useContext } from "react";
+import ParentCom from "./Components/ParentCom copy/page";
+import ChildCom from "./Components/ChildCom/page";
+
 
 export default function Home() {
   const { name, setName }: any = useContext(Mycontext);
@@ -12,12 +14,13 @@ export default function Home() {
       <div>
         
       <h1>Home:{name}</h1>
-      
+
       <ContextProvider>
         
-        <ParentCom />
+        <ParentCom/>
       
     </ContextProvider>
+    <ChildCom/>
     </div>
   );
 }
