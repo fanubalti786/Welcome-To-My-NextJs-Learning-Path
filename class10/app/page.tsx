@@ -9,13 +9,15 @@ export default function Home() {
   const { name, setName }: any = useContext(Mycontext);
 
   return (
-    <ContextProvider>
       <div>
-        <div>
-          <h1>Home:{name}</h1>
-        </div>
+        
+      <h1>Home:{name}</h1>
+      
+      <ContextProvider>
+        
         <ParentCom />
-      </div>
+      
     </ContextProvider>
+    </div>
   );
 }
