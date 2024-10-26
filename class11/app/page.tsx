@@ -4,16 +4,18 @@ import { todo } from "node:test";
 import { list } from "postcss";
 import { useState } from "react";
 import picture  from "@/image/card.jpg"
+import { toDoList } from "@/Type/type";
 
 export default function Home() {
-  let toDoItems:any= []
+  const [toDoItems,setToDoItems]= useState([])
   const [inputTextField, setInputTextField] = useState("");
   const [compItem, setComItem] = useState<any>([])
   let irfan=[];
 
   const addToDoList = () => {
     const toDoItemscopy: any = [...toDoItems];
-    toDoItems.push(inputTextField);
+    toDoItemscopy.push(inputTextField)
+    setToDoItems(toDoItemscopy);
     setInputTextField("");
   };
 
@@ -21,7 +23,7 @@ export default function Home() {
   const removeTodoItem = (index:any) => {
     const removeItem: any = [...toDoItems];
     removeItem.splice(index,1)
-    toDoItems(removeItem);
+    setToDoItems(removeItem);
    
   };
 
