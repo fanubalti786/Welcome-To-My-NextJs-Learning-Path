@@ -1,7 +1,9 @@
+import ReduxProvider from "@/ReduxProvider/reduxprovider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import store from "@/store/store";
 // import "./globals.css";
-import ReduxProvider from "@/ReduxProvider/reduxprovider";
+
 
 
 
@@ -32,8 +34,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-        
-          {children}
+        <ReduxProvider>
+        {children}
+        </ReduxProvider>
+          
          
         
        
