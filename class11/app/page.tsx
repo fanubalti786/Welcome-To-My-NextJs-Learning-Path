@@ -6,15 +6,14 @@ import { useState } from "react";
 import picture  from "@/image/card.jpg"
 
 export default function Home() {
-  const [toDoItems, setToDoItems] = useState([]);
+  let toDoItems:any= []
   const [inputTextField, setInputTextField] = useState("");
-  const [compItem, setComItem] = useState([])
+  const [compItem, setComItem] = useState<any>([])
   let irfan=[];
 
   const addToDoList = () => {
     const toDoItemscopy: any = [...toDoItems];
-    toDoItemscopy.push(inputTextField);
-    setToDoItems(toDoItemscopy);
+    toDoItems.push(inputTextField);
     setInputTextField("");
   };
 
@@ -22,7 +21,7 @@ export default function Home() {
   const removeTodoItem = (index:any) => {
     const removeItem: any = [...toDoItems];
     removeItem.splice(index,1)
-    setToDoItems(removeItem);
+    toDoItems(removeItem);
    
   };
 
@@ -65,7 +64,7 @@ export default function Home() {
               </button>
 
               {toDoItems.length > 0 ? 
-              toDoItems.map((item,index)=>
+              toDoItems.map((item:any,index:any)=>
               {
 
                 const markComplete = compItem.includes(item)
