@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { todo } from "node:test";
 import { list } from "postcss";
 import { useState } from "react";
 import picture  from "@/image/card.jpg"
