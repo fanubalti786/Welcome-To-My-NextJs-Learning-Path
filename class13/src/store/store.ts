@@ -1,8 +1,8 @@
 import {configureStore} from "@reduxjs/toolkit"
-import CounterSlicerReducer from "./counter/counterSlicer"
+import CounterSlicer from "./counter/counterSlicer"
 const store = configureStore({
     reducer:{
-        counter:CounterSlicerReducer
+        Counter:CounterSlicer
 
         
     },

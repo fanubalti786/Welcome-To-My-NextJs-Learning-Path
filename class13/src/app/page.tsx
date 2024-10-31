@@ -5,12 +5,12 @@ import { useSelector } from 'react-redux'
 
 
 export default function page() {
-  const counterState = useSelector((state:any) => state.counter.CounterSlicerReducer)
+  const counterState = useSelector((state:any) => state.Counter)
   console.log(counterState)
   return (
     
     
-      <div className='border-2 '>hello{counterState}</div>
+      <div className='border-2 '>Counter-{counterState.counter} and  Adder-{counterState.adder}</div>
 
     
       
