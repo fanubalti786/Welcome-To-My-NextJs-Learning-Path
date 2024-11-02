@@ -1,7 +1,5 @@
-"use client"
-import { Provider } from "react-redux";
+
 import localFont from "next/font/local";
-import store from "@/store/store";
 import "./globals.css";
 
 
@@ -31,11 +29,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-        <Provider store={store}>
+        
             <div>
                 {children}
             </div>
-         </Provider>
+         
 
         
         <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
