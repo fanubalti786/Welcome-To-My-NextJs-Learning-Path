@@ -10,7 +10,12 @@ export default function SubAbout() {
   return (
     
     
-      <div className='border-2 '>Counter-{counterState.counter} and  Adder-{counterState.adder}</div>
+      <div className='border-2 '>Counter-{counterState.counter} and  Adder-{counterState.adder}
+      <div>
+        hello
+      </div>
+      </div>
+      
 
     
   )
