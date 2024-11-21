@@ -3,6 +3,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { incrementCounter} from '@/store/counter/counterSlicer'
 import Button2 from '../Button/page'
+import Button from '@/app/components/Button/page'
 
 
 
@@ -26,6 +27,7 @@ export default function Form() {
         <hr />
         <div>
             <button>AboutComponentForm</button>
+            <Button/>
             <hr />
             
 
