@@ -12,10 +12,23 @@ export default function Home() {
   let irfan=[];
 
   const addToDoList = () => {
+    // const toDoItemscopy: any = toDoItems;
     const toDoItemscopy: any = [...toDoItems];
-    toDoItemscopy.push(inputTextField)
+
+    if(inputTextField)
+    {
+      // console.log("True")
+      toDoItemscopy.push(inputTextField);
+    }
+    else{
+      alert("please fill the input")
+    }
+    // console.log(toDoItemscopy);
     setToDoItems(toDoItemscopy);
     setInputTextField("");
+    // const newTask = inputTextField;
+    // setToDoItems([...toDoItems,newTask]);
+    
   };
 
 
