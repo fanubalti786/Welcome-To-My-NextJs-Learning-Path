@@ -80,9 +80,17 @@ export default function Home() {
               {toDoItems.length > 0 ? 
               toDoItems.map((item:any,index:any)=>
               {
-
-                const markComplete = compItem.includes(item)
-                console.log(markComplete)
+                let markComplete;
+                // const markComplete = compItem.includes(item)
+                // console.log(markComplete)
+                {compItem.map((value:any)=>
+                {
+                  if(value=== item)
+                  {
+                    markComplete = true;
+                  }
+                })}
+                
 
                 return(
                   <div className={markComplete? " border-2 rounded-[3px] mt-[5px] bg-green-500" : "border-2 rounded-[3px] mt-[5px] bg-slate-200"}>
