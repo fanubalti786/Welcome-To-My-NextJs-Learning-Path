@@ -6,9 +6,10 @@ import * as Yup from "yup";
 
 
 const contactInfoSchema = Yup.object().shape({
-  name:Yup.string().required().min(5).max(10),
   contactNum:Yup.number().required(),
-  heading:Yup.string().required()
+  heading:Yup.string().required(),
+  name:Yup.string().required().length(6)
+
 
 
 })
@@ -17,27 +18,27 @@ export default function Form() {
   
 
 
-//   const [formContent,setContent] = useState<onchang>(
+  const [formContent,setContent] = useState<onchang>(
     
-//     {
-//         name:"",
-//         contactNum:"",
-//         heading:""
-//     },
+    {
+        name:"",
+        contactNum:"",
+        heading:""
+    },
 
-//  )
-
-
-let formContent:onchang = {
-      name:"",
-      contactNum:"",
-      heading:""
-  }
+ )
 
 
+// let formContent:onchang = {
+//       name:"",
+//       contactNum:"",
+//       heading:""
+//   }
 
 
-  const onChangeHandler = (e:onchangeType) => {
+
+
+  const onChangeHandler = (e:any) => {
 
     
     const obj= {
@@ -45,7 +46,7 @@ let formContent:onchang = {
       [e.target.name]:e.target.value
     }
 
-    formContent = obj;
+    setContent(obj);
 
     // if(e.target.name=== "name")
     // {
@@ -91,7 +92,7 @@ let formContent:onchang = {
         })
         
       } catch (error) {
-        console.log(error)
+        alert(error)
       }
 
      
@@ -164,7 +165,7 @@ let formContent:onchang = {
               name="name"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Enter your user name"
-              onChange={onChangeHandler}
+              onChange={(e)=> onChangeHandler(e)}
               required
             />
           </div>
@@ -182,7 +183,7 @@ let formContent:onchang = {
               name="heading"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Enter your Heading name"
-              onChange={onChangeHandler}
+              onChange={(e)=> onChangeHandler(e)}
               required
             />
           </div>
@@ -200,7 +201,7 @@ let formContent:onchang = {
               name="contactNum"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Enter your contact number"
-              onChange={onChangeHandler}
+              onChange={(e)=> onChangeHandler(e)}
               required
             />
           </div>
