@@ -7,7 +7,7 @@ export default function page() {
   console.log(counterState)
   return (
     <div>
-      <div className='border-2 '>hello{counterState}</div>
+      <div className='border-2 '>{counterState}</div>
     </div>
   )
 }
