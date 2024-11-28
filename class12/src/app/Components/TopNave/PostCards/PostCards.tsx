@@ -6,11 +6,12 @@ export default function PostCards(props:any) {
   return (
     <div>
       <div>
-            <div className="flex">
-                <div className="max-w-sm rounded shadow-lg bg-white m-4">
+            <div className="bg-slate-200 h-[500px] p-4">
+                <div>
                     {/* Post Image */}
                     <img
-                        className="w-full"
+                        // className="w-full"
+                        style={{width:100}}
                         src={postData.image}
                         alt="Post Image"
                     />
