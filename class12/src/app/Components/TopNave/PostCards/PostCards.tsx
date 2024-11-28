@@ -11,7 +11,7 @@ export default function PostCards(props:any) {
                     {/* Post Image */}
                     <img
                         className="w-full"
-                        src="https://via.placeholder.com/400x200"
+                        src={postData.image}
                         alt="Post Image"
                     />
 
@@ -19,7 +19,7 @@ export default function PostCards(props:any) {
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{postData.title}</div>
                         <p className="text-gray-700 text-base">
-                        {postData.body}
+                        {postData.description}
                         </p>
                     </div>
 
