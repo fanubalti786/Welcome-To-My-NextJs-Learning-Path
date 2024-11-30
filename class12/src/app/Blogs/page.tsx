@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import PostCards from '../Components/TopNave/PostCards/PostCards'
 import Link from 'next/link'
 
@@ -20,14 +20,14 @@ export default async function Blogs() {
 
   // useEffect(()=>
   //   {
-  //     console.log("Run")
+  //     alert("Triger")
   //     getAllPost()
     
   //   },[])
 
   // const getAllPost = async () => {
   //   try {
-  //     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  //     const response = await fetch("https://fakestoreapi.com/products");
   //     const data = await response.json();
   //     console.log(data)
   //     setData(data)
